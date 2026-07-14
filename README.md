@@ -13,8 +13,6 @@
 I'm **Harjapan Singh**, an AI & Full-Stack Developer studying at Punjab Engineering College.  
 I love building intelligent systems, multi-agent pipelines, and seamless user experiences!
 
-<img src="https://user-images.githubusercontent.com/74038190/212281775-b468df30-4edc-4bf8-a4ee-f52e1aaddc86.gif" width="180">
-
 ### <img src="https://user-images.githubusercontent.com/74038190/216122041-518ac897-8d92-4c6b-9b3f-ca01dcaf38ee.png" width="25"> Tech Stack & Tools
 
 <img src="https://skillicons.dev/icons?i=py,ts,js,nodejs,react,nextjs,fastapi,postgres,redis,elasticsearch,docker,aws,git,figma" />
