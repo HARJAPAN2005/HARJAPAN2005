@@ -38,6 +38,6 @@ I love building intelligent systems, multi-agent pipelines, and seamless user ex
   </a>
 </div>
 
-<img src="https://user-images.githubusercontent.com/74038190/213866269-5d00981c-7c98-46d7-8a8e-16f462f15227.gif" width="100" />
+<img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" />
 
 </div>
