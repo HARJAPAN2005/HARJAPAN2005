@@ -138,25 +138,21 @@
       <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.3s" fill="freeze"/>
     </line>
 
-    <!-- ASCII Portrait (floating + glow) -->
+    <!-- Profile Image (floating + cyber scanline) -->
     <g filter="url(#asciiGlow)">
       <animateTransform attributeName="transform" type="translate" values="0,0;0,-5;0,0" dur="6s" repeatCount="indefinite"/>
-
-      <text x="234" y="185" text-anchor="middle" font-family="Consolas,'Courier New',monospace" font-size="13" fill="url(#asciiGrad)" opacity="0">████████████████████████<animate attributeName="opacity" from="0" to="1" dur="0.12s" begin="0.4s" fill="freeze"/></text>
-      <text x="234" y="202" text-anchor="middle" font-family="Consolas,'Courier New',monospace" font-size="13" fill="url(#asciiGrad)" opacity="0">██                    ██<animate attributeName="opacity" from="0" to="1" dur="0.12s" begin="0.55s" fill="freeze"/></text>
-      <text x="234" y="219" text-anchor="middle" font-family="Consolas,'Courier New',monospace" font-size="13" fill="url(#asciiGrad)" opacity="0">██    ▓▓▓▓    ▓▓▓▓    ██<animate attributeName="opacity" from="0" to="1" dur="0.12s" begin="0.7s" fill="freeze"/></text>
-      <text x="234" y="236" text-anchor="middle" font-family="Consolas,'Courier New',monospace" font-size="13" fill="url(#asciiGrad)" opacity="0">██    ▓▓▓▓    ▓▓▓▓    ██<animate attributeName="opacity" from="0" to="1" dur="0.12s" begin="0.85s" fill="freeze"/></text>
-      <text x="234" y="253" text-anchor="middle" font-family="Consolas,'Courier New',monospace" font-size="13" fill="url(#asciiGrad)" opacity="0">██                    ██<animate attributeName="opacity" from="0" to="1" dur="0.12s" begin="1.0s" fill="freeze"/></text>
-      <text x="234" y="270" text-anchor="middle" font-family="Consolas,'Courier New',monospace" font-size="13" fill="url(#asciiGrad)" opacity="0">██                    ██<animate attributeName="opacity" from="0" to="1" dur="0.12s" begin="1.15s" fill="freeze"/></text>
-      <text x="234" y="287" text-anchor="middle" font-family="Consolas,'Courier New',monospace" font-size="13" fill="url(#asciiGrad)" opacity="0">██      ▓██████▓      ██<animate attributeName="opacity" from="0" to="1" dur="0.12s" begin="1.3s" fill="freeze"/></text>
-      <text x="234" y="304" text-anchor="middle" font-family="Consolas,'Courier New',monospace" font-size="13" fill="url(#asciiGrad)" opacity="0">██       ██████       ██<animate attributeName="opacity" from="0" to="1" dur="0.12s" begin="1.45s" fill="freeze"/></text>
-      <text x="234" y="321" text-anchor="middle" font-family="Consolas,'Courier New',monospace" font-size="13" fill="url(#asciiGrad)" opacity="0">██                    ██<animate attributeName="opacity" from="0" to="1" dur="0.12s" begin="1.6s" fill="freeze"/></text>
-      <text x="234" y="338" text-anchor="middle" font-family="Consolas,'Courier New',monospace" font-size="13" fill="url(#asciiGrad)" opacity="0">████████████████████████<animate attributeName="opacity" from="0" to="1" dur="0.12s" begin="1.75s" fill="freeze"/></text>
-      <text x="234" y="355" text-anchor="middle" font-family="Consolas,'Courier New',monospace" font-size="13" fill="url(#asciiGrad)" opacity="0">        ██      ██<animate attributeName="opacity" from="0" to="1" dur="0.12s" begin="1.9s" fill="freeze"/></text>
-      <text x="234" y="372" text-anchor="middle" font-family="Consolas,'Courier New',monospace" font-size="13" fill="url(#asciiGrad)" opacity="0">    ████████████████<animate attributeName="opacity" from="0" to="1" dur="0.12s" begin="2.05s" fill="freeze"/></text>
-      <text x="234" y="389" text-anchor="middle" font-family="Consolas,'Courier New',monospace" font-size="13" fill="url(#asciiGrad)" opacity="0">    ██   { &lt;/&gt; }   ██<animate attributeName="opacity" from="0" to="1" dur="0.12s" begin="2.2s" fill="freeze"/></text>
-      <text x="234" y="406" text-anchor="middle" font-family="Consolas,'Courier New',monospace" font-size="13" fill="url(#asciiGrad)" opacity="0">    ██   [ ... ]   ██<animate attributeName="opacity" from="0" to="1" dur="0.12s" begin="2.35s" fill="freeze"/></text>
-      <text x="234" y="423" text-anchor="middle" font-family="Consolas,'Courier New',monospace" font-size="13" fill="url(#asciiGrad)" opacity="0">    ████████████████<animate attributeName="opacity" from="0" to="1" dur="0.12s" begin="2.5s" fill="freeze"/></text>
+      
+      <!-- User image: place profile.jpg in your GitHub repo -->
+      <mask id="imgMask">
+        <rect x="144" y="165" width="180" height="240" rx="16" fill="white"/>
+      </mask>
+      <image href="profile.jpg" x="144" y="165" width="180" height="240" preserveAspectRatio="xMidYMid slice" mask="url(#imgMask)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" dur="1s" begin="0.4s" fill="freeze"/>
+      </image>
+      <!-- Cyber scanline over image -->
+      <rect x="144" y="165" width="180" height="4" fill="#2563EB" opacity="0.6" mask="url(#imgMask)">
+        <animate attributeName="y" from="165" to="405" dur="2.5s" repeatCount="indefinite"/>
+      </rect>
     </g>
 
     <!-- Framing line below -->
@@ -212,11 +208,11 @@
     </text>
 
     <!-- Cycling role text -->
-    <text x="488" y="155" font-family="Consolas,monospace" font-size="14" fill="url(#accent)" clip-path="url(#rc1)">&gt; Frontend Engineer</text>
-    <text x="488" y="155" font-family="Consolas,monospace" font-size="14" fill="url(#accent)" clip-path="url(#rc2)">&gt; Full Stack Developer</text>
-    <text x="488" y="155" font-family="Consolas,monospace" font-size="14" fill="url(#accent)" clip-path="url(#rc3)">&gt; Open Source Contributor</text>
-    <text x="488" y="155" font-family="Consolas,monospace" font-size="14" fill="url(#accent)" clip-path="url(#rc4)">&gt; UI/UX Engineer</text>
-    <text x="488" y="155" font-family="Consolas,monospace" font-size="14" fill="url(#accent)" clip-path="url(#rc5)">&gt; AI Enthusiast</text>
+    <text x="488" y="155" font-family="Consolas,monospace" font-size="14" fill="url(#accent)" clip-path="url(#rc1)">&gt; Software Engineer</text>
+    <text x="488" y="155" font-family="Consolas,monospace" font-size="14" fill="url(#accent)" clip-path="url(#rc2)">&gt; AI &amp; Full-Stack Dev</text>
+    <text x="488" y="155" font-family="Consolas,monospace" font-size="14" fill="url(#accent)" clip-path="url(#rc3)">&gt; Data Science Undergrad</text>
+    <text x="488" y="155" font-family="Consolas,monospace" font-size="14" fill="url(#accent)" clip-path="url(#rc4)">&gt; AI Voice &amp; RAG Builder</text>
+    <text x="488" y="155" font-family="Consolas,monospace" font-size="14" fill="url(#accent)" clip-path="url(#rc5)">&gt; Multi-Agent Systems</text>
 
     <!-- Typing cursor -->
     <rect x="488" y="142" width="8" height="15" fill="#2563EB">
@@ -230,19 +226,19 @@
 
     <!-- Info items -->
     <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="1.8s" fill="freeze"/>
-      <text x="488" y="200" font-family="Consolas,monospace" font-size="12"><tspan fill="#94A3B8">location:  </tspan><tspan fill="#0F172A">San Francisco, CA</tspan></text>
+      <text x="488" y="200" font-family="Consolas,monospace" font-size="12"><tspan fill="#94A3B8">location:  </tspan><tspan fill="#0F172A">Chandigarh, India</tspan></text>
     </g>
     <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="2.1s" fill="freeze"/>
-      <text x="488" y="224" font-family="Consolas,monospace" font-size="12"><tspan fill="#94A3B8">education: </tspan><tspan fill="#0F172A">Computer Science</tspan></text>
+      <text x="488" y="224" font-family="Consolas,monospace" font-size="12"><tspan fill="#94A3B8">education: </tspan><tspan fill="#0F172A">Punjab Engineering College</tspan></text>
     </g>
     <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="2.4s" fill="freeze"/>
-      <text x="488" y="248" font-family="Consolas,monospace" font-size="12"><tspan fill="#94A3B8">focus:     </tspan><tspan fill="#0F172A">Building the future of web</tspan></text>
+      <text x="488" y="248" font-family="Consolas,monospace" font-size="12"><tspan fill="#94A3B8">focus:     </tspan><tspan fill="#0F172A">AI &amp; Full-Stack Development</tspan></text>
     </g>
     <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="2.7s" fill="freeze"/>
-      <text x="488" y="272" font-family="Consolas,monospace" font-size="12"><tspan fill="#94A3B8">portfolio: </tspan><tspan fill="#0F172A">portfolio.dev</tspan></text>
+      <text x="488" y="272" font-family="Consolas,monospace" font-size="12"><tspan fill="#94A3B8">portfolio: </tspan><tspan fill="#0F172A">harjapan.vercel.app</tspan></text>
     </g>
     <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="3.0s" fill="freeze"/>
-      <text x="488" y="296" font-family="Consolas,monospace" font-size="12"><tspan fill="#94A3B8">email:     </tspan><tspan fill="#0F172A">hello@example.com</tspan></text>
+      <text x="488" y="296" font-family="Consolas,monospace" font-size="12"><tspan fill="#94A3B8">email:     </tspan><tspan fill="#0F172A">harjapansingh120405@gmail.com</tspan></text>
     </g>
 
     <!-- Separator 2 -->
@@ -258,41 +254,41 @@
 
     <!-- Skills Row 1 -->
     <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="3.8s" fill="freeze"/>
-      <rect x="488" y="352" width="58" height="26" rx="13" fill="#2563EB" fill-opacity="0.08" stroke="#2563EB" stroke-opacity="0.25"/>
-      <text x="517" y="369" text-anchor="middle" font-family="Consolas,monospace" font-size="11" fill="#1E293B">React</text>
+      <rect x="488" y="352" width="64" height="26" rx="13" fill="#2563EB" fill-opacity="0.08" stroke="#2563EB" stroke-opacity="0.25"/>
+      <text x="520" y="369" text-anchor="middle" font-family="Consolas,monospace" font-size="11" fill="#1E293B">Python</text>
 
-      <rect x="554" y="352" width="70" height="26" rx="13" fill="#06B6D4" fill-opacity="0.08" stroke="#06B6D4" stroke-opacity="0.25"/>
-      <text x="589" y="369" text-anchor="middle" font-family="Consolas,monospace" font-size="11" fill="#1E293B">Next.js</text>
+      <rect x="560" y="352" width="92" height="26" rx="13" fill="#06B6D4" fill-opacity="0.08" stroke="#06B6D4" stroke-opacity="0.25"/>
+      <text x="606" y="369" text-anchor="middle" font-family="Consolas,monospace" font-size="11" fill="#1E293B">TypeScript</text>
 
-      <rect x="632" y="352" width="70" height="26" rx="13" fill="#10B981" fill-opacity="0.08" stroke="#10B981" stroke-opacity="0.25"/>
-      <text x="667" y="369" text-anchor="middle" font-family="Consolas,monospace" font-size="11" fill="#1E293B">Node.js</text>
+      <rect x="660" y="352" width="70" height="26" rx="13" fill="#10B981" fill-opacity="0.08" stroke="#10B981" stroke-opacity="0.25"/>
+      <text x="695" y="369" text-anchor="middle" font-family="Consolas,monospace" font-size="11" fill="#1E293B">Node.js</text>
 
-      <rect x="710" y="352" width="92" height="26" rx="13" fill="#2563EB" fill-opacity="0.08" stroke="#2563EB" stroke-opacity="0.25"/>
-      <text x="756" y="369" text-anchor="middle" font-family="Consolas,monospace" font-size="11" fill="#1E293B">TypeScript</text>
+      <rect x="738" y="352" width="58" height="26" rx="13" fill="#2563EB" fill-opacity="0.08" stroke="#2563EB" stroke-opacity="0.25"/>
+      <text x="767" y="369" text-anchor="middle" font-family="Consolas,monospace" font-size="11" fill="#1E293B">React</text>
 
-      <rect x="810" y="352" width="80" height="26" rx="13" fill="#06B6D4" fill-opacity="0.08" stroke="#06B6D4" stroke-opacity="0.25"/>
-      <text x="850" y="369" text-anchor="middle" font-family="Consolas,monospace" font-size="11" fill="#1E293B">Tailwind</text>
+      <rect x="804" y="352" width="70" height="26" rx="13" fill="#06B6D4" fill-opacity="0.08" stroke="#06B6D4" stroke-opacity="0.25"/>
+      <text x="839" y="369" text-anchor="middle" font-family="Consolas,monospace" font-size="11" fill="#1E293B">FastAPI</text>
 
-      <rect x="898" y="352" width="64" height="26" rx="13" fill="#7C3AED" fill-opacity="0.08" stroke="#7C3AED" stroke-opacity="0.25"/>
-      <text x="930" y="369" text-anchor="middle" font-family="Consolas,monospace" font-size="11" fill="#1E293B">Python</text>
+      <rect x="882" y="352" width="74" height="26" rx="13" fill="#7C3AED" fill-opacity="0.08" stroke="#7C3AED" stroke-opacity="0.25"/>
+      <text x="919" y="369" text-anchor="middle" font-family="Consolas,monospace" font-size="11" fill="#1E293B">LangChain</text>
     </g>
 
     <!-- Skills Row 2 -->
     <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="4.2s" fill="freeze"/>
-      <rect x="488" y="386" width="64" height="26" rx="13" fill="#10B981" fill-opacity="0.08" stroke="#10B981" stroke-opacity="0.25"/>
-      <text x="520" y="403" text-anchor="middle" font-family="Consolas,monospace" font-size="11" fill="#1E293B">Docker</text>
+      <rect x="488" y="386" width="100" height="26" rx="13" fill="#10B981" fill-opacity="0.08" stroke="#10B981" stroke-opacity="0.25"/>
+      <text x="538" y="403" text-anchor="middle" font-family="Consolas,monospace" font-size="11" fill="#1E293B">Elasticsearch</text>
 
-      <rect x="560" y="386" width="80" height="26" rx="13" fill="#2563EB" fill-opacity="0.08" stroke="#2563EB" stroke-opacity="0.25"/>
-      <text x="600" y="403" text-anchor="middle" font-family="Consolas,monospace" font-size="11" fill="#1E293B">Postgres</text>
+      <rect x="596" y="386" width="58" height="26" rx="13" fill="#2563EB" fill-opacity="0.08" stroke="#2563EB" stroke-opacity="0.25"/>
+      <text x="625" y="403" text-anchor="middle" font-family="Consolas,monospace" font-size="11" fill="#1E293B">Redis</text>
 
-      <rect x="648" y="386" width="46" height="26" rx="13" fill="#F59E0B" fill-opacity="0.08" stroke="#F59E0B" stroke-opacity="0.25"/>
-      <text x="671" y="403" text-anchor="middle" font-family="Consolas,monospace" font-size="11" fill="#1E293B">AWS</text>
+      <rect x="662" y="386" width="80" height="26" rx="13" fill="#F59E0B" fill-opacity="0.08" stroke="#F59E0B" stroke-opacity="0.25"/>
+      <text x="702" y="403" text-anchor="middle" font-family="Consolas,monospace" font-size="11" fill="#1E293B">Postgres</text>
 
-      <rect x="702" y="386" width="42" height="26" rx="13" fill="#EF4444" fill-opacity="0.08" stroke="#EF4444" stroke-opacity="0.25"/>
-      <text x="723" y="403" text-anchor="middle" font-family="Consolas,monospace" font-size="11" fill="#1E293B">Git</text>
+      <rect x="750" y="386" width="64" height="26" rx="13" fill="#EF4444" fill-opacity="0.08" stroke="#EF4444" stroke-opacity="0.25"/>
+      <text x="782" y="403" text-anchor="middle" font-family="Consolas,monospace" font-size="11" fill="#1E293B">OpenCV</text>
 
-      <rect x="752" y="386" width="58" height="26" rx="13" fill="#7C3AED" fill-opacity="0.08" stroke="#7C3AED" stroke-opacity="0.25"/>
-      <text x="781" y="403" text-anchor="middle" font-family="Consolas,monospace" font-size="11" fill="#1E293B">Figma</text>
+      <rect x="822" y="386" width="42" height="26" rx="13" fill="#7C3AED" fill-opacity="0.08" stroke="#7C3AED" stroke-opacity="0.25"/>
+      <text x="843" y="403" text-anchor="middle" font-family="Consolas,monospace" font-size="11" fill="#1E293B">Git</text>
     </g>
 
     <!-- Separator 3 -->
