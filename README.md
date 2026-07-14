@@ -1,3 +1,5 @@
+this is my current readme just add your changes in this 
+
 <div align="center">
 
 <picture>
@@ -25,15 +27,6 @@ I love building intelligent systems, multi-agent pipelines, and seamless user ex
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=HARJAPAN2005&theme=tokyonight&hide_border=true&background=0D1117" height="170">
 
 <br>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HARJAPAN2005/HARJAPAN2005/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/HARJAPAN2005/HARJAPAN2005/output/github-contribution-grid-snake.svg">
-  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/HARJAPAN2005/HARJAPAN2005/output/github-contribution-grid-snake.svg">
-</picture>
-
-<br>
-
 <img src="https://user-images.githubusercontent.com/74038190/212741999-016fddbd-617a-4448-8042-0ecf907aea25.gif" width="250" alt="NUX_Octodex">
 
 <div align="center">
