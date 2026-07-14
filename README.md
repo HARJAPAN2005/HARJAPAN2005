@@ -6,13 +6,12 @@
   <img alt="Profile Banner" src="dark.svg" width="100%">
 </picture>
 
-<img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/9be4d344-6782-461a-b5a6-32a07bf7b34e" width="300" alt="animated hello">
+<img src="https://user-images.githubusercontent.com/74038190/225813708-98b745f2-7d22-48cf-9150-083f1b00d6c9.gif">
+
 
 ### <img src="https://user-images.githubusercontent.com/74038190/216120986-f2752ca9-fe82-4aa3-befe-0a58db010d85.png" width="25"> About Me
 I'm **Harjapan Singh**, an AI & Full-Stack Developer studying at Punjab Engineering College.  
 I love building intelligent systems, multi-agent pipelines, and seamless user experiences!
-
-<img src="https://user-images.githubusercontent.com/74038190/212281775-b468df30-4edc-4bf8-a4ee-f52e1aaddc86.gif" width="180">
 
 ### <img src="https://user-images.githubusercontent.com/74038190/216122041-518ac897-8d92-4c6b-9b3f-ca01dcaf38ee.png" width="25"> Tech Stack & Tools
 
@@ -38,5 +37,12 @@ I love building intelligent systems, multi-agent pipelines, and seamless user ex
 </div>
 
 <img src="https://user-images.githubusercontent.com/74038190/213866269-5d00981c-7c98-46d7-8a8e-16f462f15227.gif" width="100" />
+
+<br><br>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HARJAPAN2005/HARJAPAN2005/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/HARJAPAN2005/HARJAPAN2005/output/github-contribution-grid-snake.svg">
+  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/HARJAPAN2005/HARJAPAN2005/output/github-contribution-grid-snake.svg">
+</picture>
 
 </div>
